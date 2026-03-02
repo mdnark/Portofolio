@@ -1,5 +1,5 @@
-import { HomePage } from "#/features/home/components/HomePage";
+import { PortofolioPage } from "#/features/portofolio/components/PortofolioPage";
 
 export default function Page() {
-  return <HomePage />;
+  return <PortofolioPage />;
 }
