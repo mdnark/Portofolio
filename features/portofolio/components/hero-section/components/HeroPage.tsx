@@ -1,54 +1,12 @@
 "use client";
 
 import { CustomButton } from "#/components/ui/CustomButton";
+import { listCompany } from "#/constants/companies";
 import Image from "next/image";
 import React from "react";
 import { HiDownload } from "react-icons/hi";
 
-const listCompany = [
-  {
-    path: "/assets/company/bank-papua.svg",
-    width: 150,
-    height: 50,
-  },
-  {
-    path: "/assets/company/gemilang-indonesia.svg",
-    width: 150,
-    height: 50,
-  },
-  {
-    path: "/assets/company/gna-group.svg",
-    width: 130,
-    height: 40,
-  },
-  {
-    path: "/assets/company/transjakarta.svg",
-    width: 150,
-    height: 50,
-  },
-  {
-    path: "/assets/company/w-bench.svg",
-    width: 110,
-    height: 30,
-  },
-  {
-    path: "/assets/company/maximus.svg",
-    width: 110,
-    height: 40,
-  },
-  {
-    path: "/assets/company/mbinet.svg",
-    width: 150,
-    height: 50,
-  },
-  {
-    path: "/assets/company/aca.svg",
-    width: 140,
-    height: 35,
-  },
-];
-
-export const HomePage = () => {
+export const HeroPage = () => {
   return (
     <div
       className="relative overflow-hidden min-h-screen flex flex-col gap-24"
@@ -62,7 +20,7 @@ export const HomePage = () => {
         className="absolute -top-14 -left-5"
       />
 
-      <div className="relative flex items-center justify-between gap-28 px-36 py-16">
+      <div className="relative flex items-center justify-between gap-28 px-36 pt-16">
         <div className="w-fill flex flex-col gap-4">
           <p className="text-base text-blue-900 font-semibold mb-0">
             Hi, I’m <span className="text-blue-600">M Danar Kahfi</span>
@@ -75,7 +33,7 @@ export const HomePage = () => {
               Front-End Developer
             </h1>
           </div>
-          <p className="text-slate-600 text-sm font-medium">
+          <p className="text-slate-600 text-base">
             I specialize in crafting responsive web applications with clean
             design systems and scalable front-end architecture. Passionate about
             solving real user problems through thoughtful design and efficient
@@ -113,33 +71,33 @@ export const HomePage = () => {
           />
         </div>
       </div>
-        <div className="overflow-hidden w-full bg-slate-50">
-          <div
-            className="absolute left-0 w-20 h-28 z-20 pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(to right, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)",
-            }}
-          />
-          <div
-            className="absolute right-0 w-20 h-28 z-20 pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(to left, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)",
-            }}
-          />
-          <div className="flex w-max animate-marquee px-11 py-3 gap-16 items-center">
-            {listCompany.concat(listCompany).map((val, idx) => (
-              <Image
-                key={idx}
-                src={val.path}
-                alt=""
-                width={val.width}
-                height={val.height}
-              />
-            ))}
-          </div>
+      <div className="overflow-hidden w-full bg-slate-50">
+        <div
+          className="absolute left-0 w-20 h-28 z-20 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to right, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)",
+          }}
+        />
+        <div
+          className="absolute right-0 w-20 h-28 z-20 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to left, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)",
+          }}
+        />
+        <div className="flex w-max animate-marquee px-11 py-3 gap-16 items-center">
+          {listCompany.concat(listCompany).map((val, idx) => (
+            <Image
+              key={idx}
+              src={val.path}
+              alt=""
+              width={val.width}
+              height={val.height}
+            />
+          ))}
         </div>
+      </div>
     </div>
   );
 };
