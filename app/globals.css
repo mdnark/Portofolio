@@ -11,6 +11,14 @@
   }
 }
 
-.animate-marquee {
+.animate-marquee-hero {
   animation: marquee 20s linear infinite;
+}
+
+.animate-marquee {
+  animation: marquee 9s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee 10s linear infinite reverse;
 }
