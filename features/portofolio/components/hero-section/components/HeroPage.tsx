@@ -9,7 +9,7 @@ import { HiDownload } from "react-icons/hi";
 export const HeroPage = () => {
   return (
     <div
-      className="relative overflow-hidden min-h-screen flex flex-col gap-24"
+      className="relative overflow-hidden h-fit flex flex-col gap-24"
       id="home"
     >
       <Image
