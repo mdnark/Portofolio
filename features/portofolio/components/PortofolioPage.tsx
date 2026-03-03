@@ -2,6 +2,7 @@ import React from "react";
 import { HeroPage } from "./hero-section/components/HeroPage";
 import { AboutPage } from "./about-me/components/AboutPage";
 import { ServicesPage } from "./services/components/ServicesPage";
+import { ToolsUsedPage } from "./tools-used/components/ToolsUsedPage";
 
 export const PortofolioPage = () => {
   return (
@@ -9,6 +10,7 @@ export const PortofolioPage = () => {
       <HeroPage />
       <AboutPage />
       <ServicesPage/>
+      <ToolsUsedPage/>
     </div>
   );
 };

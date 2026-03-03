@@ -63,7 +63,7 @@ export const HeroPage = () => {
             className="absolute top-0 right-9 z-10"
           />
           <div
-            className="absolute -bottom-16 right-5 w-[350px] h-28 z-20 pointer-events-none"
+            className="absolute -bottom-16 right-0 w-[350px] h-28 z-20 pointer-events-none"
             style={{
               background:
                 "linear-gradient(to top, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)",
@@ -86,7 +86,7 @@ export const HeroPage = () => {
               "linear-gradient(to left, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)",
           }}
         />
-        <div className="flex w-max animate-marquee px-11 py-3 gap-16 items-center">
+        <div className="flex w-max animate-marquee-hero px-11 py-3 gap-16 items-center">
           {listCompany.concat(listCompany).map((val, idx) => (
             <Image
               key={idx}
