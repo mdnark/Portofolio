@@ -1,11 +1,11 @@
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image'
+import React from 'react'
 
 interface Props {
-  src: string;
-  width: number;
-  height: number;
-  title: string;
+  src: string
+  width: number
+  height: number
+  title: string
 }
 
 export const SectionCard = ({ height, src, width, title }: Props) => {
@@ -14,5 +14,5 @@ export const SectionCard = ({ height, src, width, title }: Props) => {
       <Image src={src} alt="" width={width} height={height} />
       <h1 className="font-semibold text-xl text-slate-700 mb-0">{title}</h1>
     </div>
-  );
-};
+  )
+}

@@ -1,8 +1,8 @@
-import { SubTitleSection } from "#/components/ui/SubTitleSection";
-import { TitleSection } from "#/components/ui/TitleSection";
-import { contentServices } from "#/constants/services";
-import React from "react";
-import { SectionCard } from "./SectionCard";
+import { SubTitleSection } from '#/components/ui/SubTitleSection'
+import { TitleSection } from '#/components/ui/TitleSection'
+import { contentServices } from '#/constants/services'
+import React from 'react'
+import { SectionCard } from './SectionCard'
 
 export const ServicesPage = () => {
   return (
@@ -27,5 +27,5 @@ export const ServicesPage = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}

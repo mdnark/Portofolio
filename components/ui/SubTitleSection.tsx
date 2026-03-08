@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
 interface Props {
-  text: string;
-  className?: string;
+  text: string
+  className?: string
 }
 
 export const SubTitleSection = ({ text, className }: Props) => {
@@ -10,5 +10,5 @@ export const SubTitleSection = ({ text, className }: Props) => {
     <p className={`text-slate-900 mb-0 text-base text-center ${className}`}>
       {text}
     </p>
-  );
-};
+  )
+}

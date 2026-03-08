@@ -1,5 +1,5 @@
-import {UIStore} from "./ui";
+import { UIStore } from './ui'
 
 export const store = {
   ui: new UIStore(),
-};
+}
