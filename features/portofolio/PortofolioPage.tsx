@@ -1,0 +1,18 @@
+import React from 'react'
+import { HeroPage } from './hero-section/components/HeroPage'
+import { AboutPage } from './about-me/components/AboutPage'
+import { ServicesPage } from './services/components/ServicesPage'
+import { ToolsUsedPage } from './tools-used/components/ToolsUsedPage'
+import { WorkStudiesPage } from './work-studies/components/WorkStudiesPage'
+
+export const PortofolioPage = () => {
+  return (
+    <div className="flex flex-col gap-16">
+      <HeroPage />
+      <AboutPage />
+      <ServicesPage />
+      <ToolsUsedPage />
+      <WorkStudiesPage />
+    </div>
+  )
+}

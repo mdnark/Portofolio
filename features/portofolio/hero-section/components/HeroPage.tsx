@@ -1,10 +1,10 @@
-"use client";
+'use client'
 
-import { CustomButton } from "#/components/ui/CustomButton";
-import { listCompany } from "#/constants/companies";
-import Image from "next/image";
-import React from "react";
-import { HiDownload } from "react-icons/hi";
+import { CustomButton } from '#/components/ui/CustomButton'
+import { listCompany } from '#/constants/companies'
+import Image from 'next/image'
+import React from 'react'
+import { HiDownload } from 'react-icons/hi'
 
 export const HeroPage = () => {
   return (
@@ -13,7 +13,7 @@ export const HeroPage = () => {
       id="home"
     >
       <Image
-        src={"/assets/abstrac-line.svg"}
+        src={'/assets/abstrac-line.svg'}
         alt=""
         width={1290}
         height={700}
@@ -49,14 +49,14 @@ export const HeroPage = () => {
         </div>
         <div className="relative w-[963px] h-[392px]">
           <Image
-            src={"/assets/blob.svg"}
+            src={'/assets/blob.svg'}
             alt=""
             width={405}
             height={390}
             className="absolute top-16 z-0"
           />
           <Image
-            src={"/assets/hero-photo.png"}
+            src={'/assets/hero-photo.png'}
             alt=""
             width={250}
             height={450}
@@ -66,7 +66,7 @@ export const HeroPage = () => {
             className="absolute -bottom-16 right-0 w-[350px] h-28 z-20 pointer-events-none"
             style={{
               background:
-                "linear-gradient(to top, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)",
+                'linear-gradient(to top, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)',
             }}
           />
         </div>
@@ -76,14 +76,14 @@ export const HeroPage = () => {
           className="absolute left-0 w-20 h-28 z-20 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to right, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)",
+              'linear-gradient(to right, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)',
           }}
         />
         <div
           className="absolute right-0 w-20 h-28 z-20 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to left, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)",
+              'linear-gradient(to left, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)',
           }}
         />
         <div className="flex w-max animate-marquee-hero px-11 py-3 gap-16 items-center">
@@ -99,5 +99,5 @@ export const HeroPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

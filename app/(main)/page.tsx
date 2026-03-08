@@ -1,5 +1,5 @@
-import { PortofolioPage } from "#/features/portofolio/components/PortofolioPage";
+import { PortofolioPage } from '#/features/portofolio/PortofolioPage'
 
 export default function Page() {
-  return <PortofolioPage />;
+  return <PortofolioPage />
 }

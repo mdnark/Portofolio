@@ -1,42 +1,42 @@
 export const listCompany = [
   {
-    path: "/assets/company/bank-papua.svg",
+    path: '/assets/company/bank-papua.svg',
     width: 150,
     height: 50,
   },
   {
-    path: "/assets/company/gemilang-indonesia.svg",
+    path: '/assets/company/gemilang-indonesia.svg',
     width: 150,
     height: 50,
   },
   {
-    path: "/assets/company/gna-group.svg",
+    path: '/assets/company/gna-group.svg',
     width: 130,
     height: 40,
   },
   {
-    path: "/assets/company/transjakarta.svg",
+    path: '/assets/company/transjakarta.svg',
     width: 150,
     height: 50,
   },
   {
-    path: "/assets/company/w-bench.svg",
+    path: '/assets/company/w-bench.svg',
     width: 110,
     height: 30,
   },
   {
-    path: "/assets/company/maximus.svg",
+    path: '/assets/company/maximus.svg',
     width: 110,
     height: 40,
   },
   {
-    path: "/assets/company/mbinet.svg",
+    path: '/assets/company/mbinet.svg',
     width: 150,
     height: 50,
   },
   {
-    path: "/assets/company/aca.svg",
+    path: '/assets/company/aca.svg',
     width: 140,
     height: 35,
   },
-];
+]

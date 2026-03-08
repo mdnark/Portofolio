@@ -1,10 +1,10 @@
-"use client";
+'use client'
 
-import React, { useEffect } from "react";
-import { ConfigProvider } from "antd";
-import { TokenUtil } from "#/utils/token";
+import React, { useEffect } from 'react'
+import { ConfigProvider } from 'antd'
+import { TokenUtil } from '#/utils/token'
 
-TokenUtil.loadToken();
+TokenUtil.loadToken()
 export const Provider = ({ children }: any) => {
   // useEffect(() => {
   //   // @ts-ignore
@@ -15,11 +15,12 @@ export const Provider = ({ children }: any) => {
     <ConfigProvider
       theme={{
         token: {
-          colorPrimary: "#1E3A8A",
+          colorPrimary: '#1E3A8A',
+          fontFamily: 'Poppins, sans-serif',
         },
       }}
     >
       {children}
     </ConfigProvider>
-  );
-};
+  )
+}

@@ -1,13 +1,13 @@
-import { SubTitleSection } from "#/components/ui/SubTitleSection";
-import Image from "next/image";
-import React from "react";
+import { SubTitleSection } from '#/components/ui/SubTitleSection'
+import Image from 'next/image'
+import React from 'react'
 
 interface Props {
-  src: string;
-  width: number;
-  height: number;
-  title: string;
-  subtitle: string;
+  src: string
+  width: number
+  height: number
+  title: string
+  subtitle: string
 }
 
 export const SectionCard = ({ height, src, width, subtitle, title }: Props) => {
@@ -17,5 +17,5 @@ export const SectionCard = ({ height, src, width, subtitle, title }: Props) => {
       <h1 className="font-semibold text-xl text-slate-700 mb-0">{title}</h1>
       <SubTitleSection text={subtitle} className="!text-start w-52" />
     </div>
-  );
-};
+  )
+}

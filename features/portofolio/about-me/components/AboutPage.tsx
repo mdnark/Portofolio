@@ -1,6 +1,6 @@
-import { TitleSection } from "#/components/ui/TitleSection";
-import Image from "next/image";
-import React from "react";
+import { TitleSection } from '#/components/ui/TitleSection'
+import Image from 'next/image'
+import React from 'react'
 
 export const AboutPage = () => {
   return (
@@ -10,21 +10,21 @@ export const AboutPage = () => {
     >
       <div className="relative w-[963px] h-[492px]">
         <Image
-          src={"/assets/about-photo.png"}
+          src={'/assets/about-photo.png'}
           alt=""
           width={320}
           height={400}
           className="absolute bottom-0 z-20"
         />
         <Image
-          src={"/assets/circle-2.svg"}
+          src={'/assets/circle-2.svg'}
           alt=""
           width={370}
           height={510}
           className="absolute top-20 -left-4 z-10"
         />
         <Image
-          src={"/assets/circle-1.svg"}
+          src={'/assets/circle-1.svg'}
           alt=""
           width={463}
           height={600}
@@ -34,7 +34,7 @@ export const AboutPage = () => {
           className="absolute bottom-0 right-3 w-[350px] h-16 z-20 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to top, #EFF6FF 0%, rgba(255,255,255,0.7) 50%, transparent 100%)",
+              'linear-gradient(to top, #EFF6FF 0%, rgba(255,255,255,0.7) 50%, transparent 100%)',
           }}
         />
       </div>
@@ -60,5 +60,5 @@ export const AboutPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
