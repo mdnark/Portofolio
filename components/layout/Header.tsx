@@ -53,18 +53,18 @@ export const HeaderPage = () => {
 
   return (
     <Header
-      className={`h-fit flex px-24 py-5 bg-white justify-between items-center z-50`}
+      className={`z-50 flex h-fit items-center justify-between bg-white px-24 py-5`}
     >
-      <div className={`flex gap-3 items-center font-semibold text-base `}>
-        <Image src={'/logo.ico'} alt="" width={40} height={30} />
-        <p className={`text-slate-600 !mb-0`}>M Danar Kahfi</p>
+      <div className={`flex items-center gap-3 text-base font-semibold`}>
+        <Image src={'/logo.ico'} alt="" width={35} height={20} />
+        <p className={`!mb-0 text-slate-600`}>M Danar Kahfi</p>
       </div>
       <div className={`flex items-center gap-12`}>
         {activeSection.map((val, idx) => (
           <Link
             href={`#${val.id}`}
             key={idx}
-            className={`${val.isActive ? 'text-blue-600 font-semibold ' : 'text-slate-600 font-medium'} text-lg  hover:text-blue-300 md:text-sm`}
+            className={`${val.isActive ? 'font-semibold text-blue-600' : 'font-medium text-slate-600'} text-base hover:text-blue-300`}
           >
             {val.name}
           </Link>

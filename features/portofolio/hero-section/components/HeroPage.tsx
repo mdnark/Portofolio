@@ -1,10 +1,10 @@
 'use client'
 
 import { CustomButton } from '#/components/ui/CustomButton'
-import { listCompany } from '#/constants/companies'
 import Image from 'next/image'
 import React from 'react'
 import { HiDownload } from 'react-icons/hi'
+import { BannerCompany } from './BannerCompany'
 
 export const HeroPage = () => {
   return (
@@ -17,11 +17,11 @@ export const HeroPage = () => {
         alt=""
         width={1290}
         height={700}
-        className="absolute -top-14 -left-5"
+        className="absolute top-0 -left-5"
       />
 
       <div className="relative flex items-center justify-between gap-28 px-36 pt-16">
-        <div className="w-fill flex flex-col gap-4">
+        <div className="w-full flex flex-col gap-4">
           <p className="text-base text-blue-900 font-semibold mb-0">
             Hi, I’m <span className="text-blue-600">M Danar Kahfi</span>
           </p>
@@ -47,23 +47,23 @@ export const HeroPage = () => {
             />
           </div>
         </div>
-        <div className="relative w-[963px] h-[392px]">
+        <div className="relative w-[963px] h-[462px]">
           <Image
             src={'/assets/blob.svg'}
             alt=""
-            width={405}
+            width={425}
             height={390}
-            className="absolute top-16 z-0"
+            className="absolute bottom-0 left-7 z-0"
           />
           <Image
             src={'/assets/hero-photo.png'}
             alt=""
             width={250}
             height={450}
-            className="absolute top-0 right-9 z-10"
+            className="absolute bottom-0 left-1/4 z-10"
           />
           <div
-            className="absolute -bottom-16 right-0 w-[350px] h-28 z-20 pointer-events-none"
+            className="absolute bottom-0  w-full h-28 z-20 pointer-events-none"
             style={{
               background:
                 'linear-gradient(to top, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)',
@@ -71,33 +71,7 @@ export const HeroPage = () => {
           />
         </div>
       </div>
-      <div className="overflow-hidden w-full bg-slate-50">
-        <div
-          className="absolute left-0 w-20 h-28 z-20 pointer-events-none"
-          style={{
-            background:
-              'linear-gradient(to right, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)',
-          }}
-        />
-        <div
-          className="absolute right-0 w-20 h-28 z-20 pointer-events-none"
-          style={{
-            background:
-              'linear-gradient(to left, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)',
-          }}
-        />
-        <div className="flex w-max animate-marquee-hero px-11 py-3 gap-16 items-center">
-          {listCompany.concat(listCompany).map((val, idx) => (
-            <Image
-              key={idx}
-              src={val.path}
-              alt=""
-              width={val.width}
-              height={val.height}
-            />
-          ))}
-        </div>
-      </div>
+      <BannerCompany/>
     </div>
   )
 }

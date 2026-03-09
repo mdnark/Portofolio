@@ -27,7 +27,7 @@ export const SectionCard = ({ jobPosition, src, subtitle, title }: Props) => {
           </h1>
           <SubTitleSection
             text={subtitle}
-            className="text-slate-500 text-start"
+            className="!text-slate-600 text-start"
           />
         </div>
         <div className="flex gap-4">

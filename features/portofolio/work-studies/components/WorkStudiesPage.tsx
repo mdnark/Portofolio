@@ -1,27 +1,52 @@
+'use client'
+
+import { motion, useScroll, useTransform } from 'motion/react'
+import { useRef } from 'react'
+
 import { SubTitleSection } from '#/components/ui/SubTitleSection'
 import { TitleSection } from '#/components/ui/TitleSection'
-import React from 'react'
 import { SectionCard } from './SectionCard'
 import { listProjects } from '#/constants/projects'
 
+const CARD_WIDTH = 470
+const GAP = 24
+
 export const WorkStudiesPage = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null)
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start start', 'end end'],
+  })
+
+  const totalDistance = (listProjects.length - 1) * (CARD_WIDTH + GAP)
+
+  const x = useTransform(scrollYProgress, [0, 1], [0, -totalDistance])
+
   return (
-    <div className="flex flex-col gap-12 px-32 items-center">
-      <div className="flex flex-col gap-6 pb-8 items-center w-[592px]">
-        <TitleSection text="Work & Case Studies" />
-        <SubTitleSection text="A collection of web and mobile applications I’ve designed and developed, focused on usability, performance, and business impact." />
+    <section className="w-full">
+      {/* Title */}
+      <div className="flex w-full justify-center">
+        <div className="flex w-[642px] flex-col items-center gap-6 pb-12 text-center">
+          <TitleSection text="Work & Case Studies" />
+          <SubTitleSection text="A collection of web and mobile applications I’ve designed and developed, focused on usability, performance, and business impact." />
+        </div>
       </div>
-      <div className="grid grid-cols-2 gap-6">
-        {listProjects.map((val, idx) => (
-          <SectionCard
-            key={idx}
-            src={val.src}
-            jobPosition={val.jobPosition}
-            subtitle={val.subtitle}
-            title={val.title}
-          />
-        ))}
+
+      {/* Scroll container */}
+      <div ref={containerRef} className="relative h-[300vh]">
+        {/* Sticky wrapper */}
+        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+          {/* Horizontal gallery */}
+          <motion.div style={{ x }} className="flex gap-6 px-32">
+            {listProjects.map((project, idx) => (
+              <div key={idx} className="w-[470px] flex-shrink-0">
+                <SectionCard {...project} />
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
