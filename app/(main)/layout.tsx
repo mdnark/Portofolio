@@ -15,8 +15,7 @@ export default function LayoutMain({
     <Layout>
       <HeaderPage />
       <Content
-        style={{ overflow: 'auto' }}
-        className="!h-full no-scrollbar !min-h-[calc(100vh-84px)] bg-white"
+        className="!h-full no-scrollbar !min-h-[calc(100vh-84px)] pb-6 bg-white"
       >
         {children}
       </Content>

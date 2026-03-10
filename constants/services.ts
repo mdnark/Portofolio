@@ -18,7 +18,7 @@ export const contentServices = [
     subtitle:
       'Building user-friendly mobile applications with modern standards.',
     icon: '/assets/icon/mobile-dev.svg',
-    width: 50,
-    height: 50,
+    width: 30,
+    height: 30,
   },
 ]

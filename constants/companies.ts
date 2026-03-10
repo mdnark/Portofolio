@@ -31,12 +31,12 @@ export const listCompany = [
   },
   {
     path: '/assets/company/mbinet.svg',
-    width: 150,
+    width: 90,
     height: 50,
   },
   {
     path: '/assets/company/aca.svg',
-    width: 140,
+    width: 60,
     height: 35,
   },
 ]
