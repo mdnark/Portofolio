@@ -53,11 +53,11 @@ export const HeaderPage = () => {
 
   return (
     <Header
-      className={`z-50 flex h-fit items-center justify-between bg-white px-24 py-5`}
+      className={`z-50 flex h-fit items-center justify-between bg-white px-32 py-5`}
     >
       <div className={`flex items-center gap-3 text-base font-semibold`}>
-        <Image src={'/logo.ico'} alt="" width={35} height={20} />
-        <p className={`!mb-0 text-slate-600`}>M Danar Kahfi</p>
+        <Image src={'/logo.png'} alt="" width={60} height={60} />
+        {/* <p className={`!mb-0 text-slate-600`}>M Danar Kahfi</p> */}
       </div>
       <div className={`flex items-center gap-12`}>
         {activeSection.map((val, idx) => (

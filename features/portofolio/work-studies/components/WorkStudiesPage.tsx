@@ -8,8 +8,8 @@ import { TitleSection } from '#/components/ui/TitleSection'
 import { SectionCard } from './SectionCard'
 import { listProjects } from '#/constants/projects'
 
-const CARD_WIDTH = 470
-const GAP = 24
+const CARD_WIDTH = 420
+const GAP = 32
 
 export const WorkStudiesPage = () => {
   const containerRef = useRef<HTMLDivElement | null>(null)
@@ -38,7 +38,7 @@ export const WorkStudiesPage = () => {
         {/* Sticky wrapper */}
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
           {/* Horizontal gallery */}
-          <motion.div style={{ x }} className="flex gap-6 px-32">
+          <motion.div style={{ x }} className="flex gap-8 px-32">
             {listProjects.map((project, idx) => (
               <div key={idx} className="w-[470px] flex-shrink-0">
                 <SectionCard {...project} />
