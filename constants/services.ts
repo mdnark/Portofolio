@@ -1,6 +1,6 @@
 export const contentServices = [
   {
-    title: 'UI/UX',
+    title: 'UI/UX Design',
     subtitle: 'Creating intuitive and visually engaging user experiences.',
     icon: '/assets/icon/ui-ux.svg',
     width: 50,

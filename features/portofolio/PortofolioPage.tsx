@@ -7,7 +7,7 @@ import { WorkStudiesPage } from './work-studies/components/WorkStudiesPage'
 
 export const PortofolioPage = () => {
   return (
-    <div className="flex flex-col gap-16">
+    <div className="flex flex-col gap-16 mx-auto max-w-7xl">
       <HeroPage />
       <AboutPage />
       <ServicesPage />
