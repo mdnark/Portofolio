@@ -4,12 +4,11 @@ import { CustomButton } from '#/components/ui/CustomButton'
 import Image from 'next/image'
 import React from 'react'
 import { HiDownload } from 'react-icons/hi'
-import { BannerCompany } from './BannerCompany'
 
 export const HeroPage = () => {
   return (
     <div
-      className="relative overflow-hidden h-fit flex flex-col gap-24"
+      className="relative flex h-fit flex-col gap-24 overflow-hidden"
       id="home"
     >
       <Image
@@ -17,23 +16,23 @@ export const HeroPage = () => {
         alt=""
         width={1290}
         height={700}
-        className="absolute top-0 -left-5"
+        className="absolute -left-5 top-0"
       />
 
-      <div className="relative flex items-center justify-between gap-28 px-36 pt-16">
-        <div className="w-full flex flex-col gap-4">
-          <p className="text-base text-blue-900 font-semibold mb-0">
+      <div className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-12 px-16 pt-16 lg:gap-14 lg:px-36 xl:gap-28">
+        <div className="flex w-full flex-col gap-4">
+          <p className="mb-0 text-xl font-medium text-blue-900">
             Hi, I’m <span className="text-blue-600">M Danar Kahfi</span>
           </p>
           <div>
-            <h1 className="inline-block bg-primary-gradient font-bold text-4xl bg-clip-text text-transparent mb-0 pb-3">
+            <h1 className="mb-0 inline-block bg-primary-gradient bg-clip-text pb-3 text-3xl font-bold text-transparent lg:text-4xl">
               UI/UX Designer &
             </h1>
-            <h1 className="w-full inline-block bg-primary-gradient font-bold text-4xl bg-clip-text text-transparent mb-0 pb-3 text-end">
+            <h1 className="mb-0 inline-block w-96 md:w-full bg-primary-gradient bg-clip-text pb-3 text-3xl font-bold text-transparent text-end lg:text-4xl">
               Front-End Developer
             </h1>
           </div>
-          <p className="text-slate-600 text-base">
+          <p className="text-base text-slate-600">
             I specialize in crafting responsive web applications with clean
             design systems and scalable front-end architecture. Passionate about
             solving real user problems through thoughtful design and efficient
@@ -47,23 +46,21 @@ export const HeroPage = () => {
             />
           </div>
         </div>
-        <div className="relative w-[963px] h-[462px]">
+        <div className="relative h-[462px] w-[563px] lg:w-[663px] xl:w-[963px]">
           <Image
             src={'/assets/blob.svg'}
             alt=""
-            width={425}
-            height={390}
-            className="absolute bottom-0 left-7 z-0"
+            fill
+            className="object-contain"
           />
           <Image
             src={'/assets/hero-photo.png'}
             alt=""
-            width={250}
-            height={450}
-            className="absolute bottom-0 left-1/4 z-10"
+            fill
+            className="object-contain"
           />
           <div
-            className="absolute bottom-0  w-full h-28 z-20 pointer-events-none"
+            className="pointer-events-none absolute -bottom-1 z-20 h-28 w-full"
             style={{
               background:
                 'linear-gradient(to top, white 0%, rgba(255,255,255,0.7) 50%, transparent 100%)',
@@ -71,7 +68,6 @@ export const HeroPage = () => {
           />
         </div>
       </div>
-      <BannerCompany/>
     </div>
   )
 }

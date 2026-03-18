@@ -1,8 +1,9 @@
-import { Layout } from 'antd'
+import { Button, Drawer, Layout } from 'antd'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { CustomButton } from '../ui/CustomButton'
 import Image from 'next/image'
+import { HiMenuAlt4 } from 'react-icons/hi'
 
 export interface MenuItem {
   id: string
@@ -22,6 +23,7 @@ const listMenu: MenuItem[] = [
 
 export const HeaderPage = () => {
   const [activeSection, setActiveSection] = useState<MenuItem[]>(listMenu)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,13 +55,14 @@ export const HeaderPage = () => {
 
   return (
     <Header
-      className={`z-50 flex h-fit items-center justify-between bg-white px-32 py-5`}
+      className={`z-50 flex h-fit items-center justify-between bg-white px-6 py-5 sm:px-8 md:px-16 lg:px-32`}
     >
-      <div className={`flex items-center gap-3 text-base font-semibold`}>
-        <Image src={'/logo.png'} alt="" width={60} height={60} />
-        {/* <p className={`!mb-0 text-slate-600`}>M Danar Kahfi</p> */}
+      <div
+        className={`relative flex h-14 w-14 items-center gap-3 text-base font-semibold`}
+      >
+        <Image src={'/logo.png'} alt="" fill className="object-contain" />
       </div>
-      <div className={`flex items-center gap-12`}>
+      <div className={`hidden items-center gap-7 md:flex lg:gap-12`}>
         {activeSection.map((val, idx) => (
           <Link
             href={`#${val.id}`}
@@ -71,6 +74,22 @@ export const HeaderPage = () => {
         ))}
         <CustomButton text="Contact me" isPrimary />
       </div>
+      <Button
+        onClick={() => setOpen(!open)}
+        className="flex h-fit items-center justify-center border border-slate-300 px-3 py-2 md:hidden"
+      >
+        <HiMenuAlt4 className="text-2xl text-slate-600" />
+      </Button>
+      <Drawer
+        title="Basic Drawer"
+        closable={{ 'aria-label': 'Close Button' }}
+        onClose={() => setOpen(false)}
+        open={open}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Drawer>
     </Header>
   )
 }
