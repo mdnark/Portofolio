@@ -15,6 +15,9 @@ module.exports = {
         'primary-gradient':
           'linear-gradient(90deg, rgba(30,58,138,1) 0%, rgba(29,78,216,0.73) 50%, rgba(59,130,246,0.6) 100%)',
       },
+      colors: {
+        'primary': '#0F1DC4',
+      },
     },
   },
   plugins: [],

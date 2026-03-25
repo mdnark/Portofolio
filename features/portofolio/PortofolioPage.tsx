@@ -12,7 +12,7 @@ export const PortofolioPage = () => {
       <AboutPage />
       <ServicesPage />
       <ToolsUsedPage />
-      <WorkStudiesPage />
+      {/* <WorkStudiesPage /> */}
     </div>
   )
 }

@@ -53,32 +53,44 @@ export const HeaderPage = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const handleScrollTo = (id: string) => {
+    if (id === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      const el = document.getElementById(id)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+    setOpen(false) // tutup drawer jika dari mobile
+  }
+
   return (
     <Header
-      className={`z-50 flex h-fit items-center justify-between bg-white px-6 py-5 sm:px-8 md:px-16 lg:px-32`}
+      className={`fixed z-50 flex h-fit w-full items-center justify-between bg-white px-6 py-2 sm:px-8 md:px-16 lg:px-24`}
     >
       <div
-        className={`relative flex h-14 w-14 items-center gap-3 text-base font-semibold`}
+        className={`relative flex h-16 w-16 items-center gap-3 text-base font-semibold`}
       >
         <Image src={'/logo.png'} alt="" fill className="object-contain" />
       </div>
       <div className={`hidden items-center gap-7 md:flex lg:gap-12`}>
         {activeSection.map((val, idx) => (
-          <Link
-            href={`#${val.id}`}
+          <Button
+            onClick={() => handleScrollTo(val.id)}
             key={idx}
-            className={`${val.isActive ? 'font-semibold text-blue-600' : 'font-medium text-slate-600'} text-base hover:text-blue-300`}
+            className={`border-none shadow-none hover:!text-slate-300 ${val.isActive ? 'font-bold text-primary' : 'font-medium text-slate-600'} text-base hover:text-blue-300`}
           >
             {val.name}
-          </Link>
+          </Button>
         ))}
-        <CustomButton text="Contact me" isPrimary />
       </div>
+      <CustomButton text="Contact me" isPrimary className={`hidden md:flex`} />
       <Button
         onClick={() => setOpen(!open)}
-        className="flex h-fit items-center justify-center border border-slate-300 px-3 py-2 md:hidden"
+        className="flex h-fit items-center justify-center border-none bg-blue-50 px-3 py-2 md:hidden"
       >
-        <HiMenuAlt4 className="text-2xl text-slate-600" />
+        <HiMenuAlt4 className="text-3xl text-primary" />
       </Button>
       <Drawer
         title="Basic Drawer"

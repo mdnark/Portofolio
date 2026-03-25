@@ -15,7 +15,7 @@ export default function LayoutMain({
     <Layout>
       <HeaderPage />
       <Content
-        className="!h-full no-scrollbar !min-h-[calc(100vh-84px)] pb-6 bg-white"
+        className="!h-full no-scrollbar !min-h-[calc(100vh-84px)] pb-6 bg-white overflow-hidden mt-20"
       >
         {children}
       </Content>
