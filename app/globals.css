@@ -26,3 +26,17 @@ html {
 .animate-marquee-reverse {
   animation: marquee 10s linear infinite reverse;
 }
+
+@media (max-width: 768px) {
+  .animate-marquee-hero {
+    animation: marquee 25s linear infinite;
+  }
+
+  .animate-marquee {
+    animation: marquee 13s linear infinite;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee 15s linear infinite reverse;
+  }
+}

@@ -3,6 +3,8 @@
 import { useBreakpoint } from '#/hooks/useBreakpoint'
 import Image from 'next/image'
 import React from 'react'
+import { RunningBanner } from './RunningBanner'
+import { contentServices } from '#/constants/services'
 
 export const HeroPage = () => {
   const { isMobile } = useBreakpoint()
@@ -15,17 +17,15 @@ export const HeroPage = () => {
   const textShadow = '[text-shadow:7px_7px_24px_rgba(0,0,0,0.10)]'
 
   const words = ['PORTO', 'FOLIO']
+
   return (
-    <div
-      className="relative flex h-fit w-full justify-center overflow-hidden pt-10"
-      id="home"
-    >
+    <div className="relative flex h-fit w-full justify-center pt-7" id="home">
       <Image
         src={'/assets/abstrac-line.svg'}
         alt=""
         width={1290}
         height={700}
-        className="absolute top-5"
+        className="absolute top-0 skew-y-6"
       />
 
       <div className="relative h-[310px] w-[300px] sm:h-[442px] sm:w-[463px] md:h-[502px] md:w-[663px] xl:w-[963px]">
@@ -68,6 +68,7 @@ export const HeroPage = () => {
           }}
         />
       </div>
+      <RunningBanner data={contentServices} />
     </div>
   )
 }

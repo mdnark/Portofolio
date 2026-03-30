@@ -72,7 +72,7 @@ export const HeaderPage = () => {
       <div
         className={`relative flex h-16 w-16 items-center gap-3 text-base font-semibold`}
       >
-        <Image src={'/logo.png'} alt="" fill className="object-contain" />
+        <Image src={'/logos.png'} alt="" fill className="object-contain" />
       </div>
       <div className={`hidden items-center gap-7 md:flex lg:gap-12`}>
         {activeSection.map((val, idx) => (
