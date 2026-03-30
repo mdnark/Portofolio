@@ -5,7 +5,7 @@ import React from 'react'
 export const AboutPage = () => {
   return (
     <div
-      className="relative flex items-center gap-14 bg-slate-50 pl-24 pr-36"
+      className="relative flex items-center gap-14 bg-slate-50 pl-24 pr-36 mt-11"
       id="about_me"
     >
       <div className="relative h-[492px] w-[963px]">
@@ -17,14 +17,7 @@ export const AboutPage = () => {
           className="absolute bottom-0 left-16 z-20"
         />
         <Image
-          src={'/assets/circle-2.svg'}
-          alt=""
-          width={370}
-          height={510}
-          className="absolute bottom-0 left-12 z-10"
-        />
-        <Image
-          src={'/assets/circle-1.svg'}
+          src={'/assets/blob.svg'}
           alt=""
           width={463}
           height={600}

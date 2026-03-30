@@ -5,12 +5,13 @@ interface Props {
   text: string
   icon?: React.ReactNode
   isPrimary?: boolean
+  className?: React.ReactNode
 }
 
-export const CustomButton = ({ isPrimary, text, icon }: Props) => {
+export const CustomButton = ({ isPrimary, text, icon, className }: Props) => {
   return (
     <Button
-      className={`rounded-full flex items-center font-semibold text-sm px-4 py-2 h-fit ${isPrimary ? 'bg-blue-900 text-white hover:!text-white hover:!bg-blue-600' : 'border border-slate-200 text-blue-900 hover:!text-blue-900'}`}
+      className={`${className} flex h-fit items-center rounded-full px-4 py-2 text-sm font-semibold ${isPrimary ? 'bg-primary text-white hover:!bg-blue-600 hover:!text-white' : 'border border-slate-200 text-blue-900 hover:!text-blue-900'}`}
     >
       {icon}
       {text}

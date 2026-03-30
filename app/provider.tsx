@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import { ConfigProvider } from 'antd'
 import { TokenUtil } from '#/utils/token'
 
@@ -15,7 +15,7 @@ export const Provider = ({ children }: any) => {
     <ConfigProvider
       theme={{
         token: {
-          colorPrimary: '#1E3A8A',
+          colorPrimary: '#F8FAFC',
           fontFamily: 'Poppins, sans-serif',
         },
       }}

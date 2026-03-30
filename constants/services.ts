@@ -7,14 +7,14 @@ export const contentServices = [
     height: 50,
   },
   {
-    title: 'Web Dev',
+    title: 'Frontend Developer',
     subtitle: 'Developing responsive and scalable web applications.',
     icon: '/assets/icon/web-dev.svg',
     width: 50,
     height: 50,
   },
   {
-    title: 'Mobile Dev',
+    title: 'Mobile Developer',
     subtitle:
       'Building user-friendly mobile applications with modern standards.',
     icon: '/assets/icon/mobile-dev.svg',
