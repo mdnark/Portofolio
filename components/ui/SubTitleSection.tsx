@@ -7,7 +7,7 @@ interface Props {
 
 export const SubTitleSection = ({ text, className }: Props) => {
   return (
-    <p className={`text-slate-900 mb-0 text-base text-center ${className}`}>
+    <p className={`w-full text-slate-900 mb-0 text-base text-center ${className}`}>
       {text}
     </p>
   )

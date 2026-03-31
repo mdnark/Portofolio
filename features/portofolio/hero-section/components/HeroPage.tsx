@@ -19,7 +19,7 @@ export const HeroPage = () => {
   const words = ['PORTO', 'FOLIO']
 
   return (
-    <div className="relative flex h-fit w-full justify-center pt-7" id="home">
+    <div className="relative flex h-fit w-full justify-center" id="home">
       <Image
         src={'/assets/abstrac-line.svg'}
         alt=""
