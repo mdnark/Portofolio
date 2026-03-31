@@ -7,7 +7,7 @@ interface Props {
 
 export const TitleSection = ({ text, className }: Props) => {
   return (
-    <h1 className={`text-blue-900 font-semibold text-4xl mb-0 ${className}`}>
+    <h1 className={`text-primary font-semibold text-4xl mb-0 ${className}`}>
       {text}
     </h1>
   )
