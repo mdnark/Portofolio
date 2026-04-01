@@ -31,7 +31,7 @@ export const SideLeftContent = () => {
 
       {/* Icons */}
 
-      <div className="shadow-[4px_4px_24px_0px_rgba(0,0,0,0.05) absolute left-7 top-10 flex h-fit w-fit items-center justify-center rounded-full bg-white p-6">
+      <div className="shadow-[4px_4px_24px_0px_rgba(0,0,0,0.05)] absolute left-7 top-10 flex h-fit w-fit items-center justify-center rounded-full bg-white p-6">
         <Image
           src={'/assets/icon/reactjs.svg'}
           alt=""
@@ -40,7 +40,7 @@ export const SideLeftContent = () => {
           className="-rotate-[30deg]"
         />
       </div>
-      <div className="shadow-[4px_4px_24px_0px_rgba(0,0,0,0.05) absolute -left-7 bottom-32 flex h-fit w-fit items-center justify-center rounded-full bg-white p-6">
+      <div className="shadow-[4px_4px_24px_0px_rgba(0,0,0,0.05)] absolute -left-7 bottom-32 flex h-fit w-fit items-center justify-center rounded-full bg-white p-6">
         <Image
           src={'/assets/icon/figma.svg'}
           alt=""
@@ -49,7 +49,7 @@ export const SideLeftContent = () => {
           className="-rotate-[30deg]"
         />
       </div>
-      <div className="shadow-[4px_4px_24px_0px_rgba(0,0,0,0.05) absolute right-5 top-36 flex h-fit w-fit items-center justify-center rounded-full bg-white p-6">
+      <div className="shadow-[4px_4px_24px_0px_rgba(0,0,0,0.05)] absolute right-5 top-36 flex h-fit w-fit items-center justify-center rounded-full bg-white p-6">
         <Image
           src={'/assets/icon/nextjs.svg'}
           alt=""
@@ -58,7 +58,7 @@ export const SideLeftContent = () => {
           className="-rotate-[30deg]"
         />
       </div>
-      <div className="shadow-[4px_4px_24px_0px_rgba(0,0,0,0.05) absolute -right-16 bottom-10 flex h-fit w-fit items-center justify-center rounded-full bg-white p-6">
+      <div className="shadow-[4px_4px_24px_0px_rgba(0,0,0,0.05)] absolute -right-16 bottom-10 flex h-fit w-fit items-center justify-center rounded-full bg-white p-6">
         <Image
           src={'/assets/icon/typescript.svg'}
           alt=""

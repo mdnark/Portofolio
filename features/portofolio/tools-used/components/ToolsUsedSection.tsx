@@ -3,7 +3,7 @@ import { listTools } from '#/constants/tools'
 import React from 'react'
 import { RunningBanner } from './RunningBanner'
 
-export const ToolsUsedPage = () => {
+export const ToolsUsedSection = () => {
   const half = Math.ceil(listTools.length / 2)
   const banner1 = listTools.slice(0, half)
   const banner2 = listTools.slice(half)
