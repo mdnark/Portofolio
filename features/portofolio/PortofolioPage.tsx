@@ -1,18 +1,22 @@
 import React from 'react'
-import { HeroPage } from './hero-section/components/HeroPage'
-import { AboutPage } from './about-me/components/AboutPage'
-import { ServicesPage } from './services/components/ServicesPage'
-import { ToolsUsedPage } from './tools-used/components/ToolsUsedPage'
-import { WorkStudiesPage } from './work-studies/components/WorkStudiesPage'
+import { HeroSection } from './hero-section/components/HeroSection'
+import { AboutSection } from './about-me/components/AboutSection'
+import { ServicesSection } from './services/components/ServicesSection'
+import { ToolsUsedSection } from './tools-used/components/ToolsUsedSection'
+import { ProjectsSection } from './projects/components/ProjectsSection'
+import { ExperienceSection } from './experience/components/ExperienceSection'
+import { FooterSection } from './footer/components/FooterSection'
 
 export const PortofolioPage = () => {
   return (
-    <div className="flex flex-col gap-16 mx-auto max-w-7xl">
-      <HeroPage />
-      <AboutPage />
-      <ServicesPage />
-      <ToolsUsedPage />
-      {/* <WorkStudiesPage /> */}
+    <div className="mx-auto flex max-w-7xl flex-col gap-16">
+      <HeroSection />
+      <AboutSection />
+      <ServicesSection />
+      <ToolsUsedSection />
+      <ProjectsSection />
+      <ExperienceSection />
+      <FooterSection/>
     </div>
   )
 }

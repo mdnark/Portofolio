@@ -39,4 +39,8 @@ export const listTools = [
     icon: '/assets/icon/dart.svg',
     text: 'Dart',
   },
+  {
+    icon: '/assets/icon/vue.svg',
+    text: 'Vue.Js',
+  },
 ]

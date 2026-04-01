@@ -6,7 +6,7 @@ import React from 'react'
 import { RunningBanner } from './RunningBanner'
 import { contentServices } from '#/constants/services'
 
-export const HeroPage = () => {
+export const HeroSection = () => {
   const { isMobile } = useBreakpoint()
 
   const textClass = isMobile ? '!mt-6' : 'mt-4 sm:mt-7 md:mt-5 lg:mt-6'

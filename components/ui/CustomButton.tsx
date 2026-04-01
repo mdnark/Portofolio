@@ -6,11 +6,19 @@ interface Props {
   icon?: React.ReactNode
   isPrimary?: boolean
   className?: React.ReactNode
+  onClick?: () => void
 }
 
-export const CustomButton = ({ isPrimary, text, icon, className }: Props) => {
+export const CustomButton = ({
+  isPrimary,
+  text,
+  icon,
+  className,
+  onClick,
+}: Props) => {
   return (
     <Button
+      onClick={onClick}
       className={`${className} flex h-fit items-center rounded-full px-4 py-2 text-sm font-semibold ${isPrimary ? 'bg-primary text-white hover:!bg-blue-600 hover:!text-white' : 'border border-slate-200 text-blue-900 hover:!text-blue-900'}`}
     >
       {icon}
