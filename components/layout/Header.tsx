@@ -4,7 +4,7 @@ import { Button, Drawer, Layout } from 'antd'
 import React, { useEffect, useState } from 'react'
 import { CustomButton } from '../ui/CustomButton'
 import Image from 'next/image'
-import { HiMenuAlt4 } from 'react-icons/hi'
+import { HiMenuAlt4, HiX } from 'react-icons/hi'
 import { listMenu, MenuItem } from '#/constants/menu'
 import { handleScrollTo } from '#/utils/scroll'
 
@@ -42,6 +42,20 @@ export const HeaderPage = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const title = (
+    <div className="flex items-center justify-between border-b border-slate-200 pb-4">
+      <div className={`relative flex h-16 w-16`}>
+        <Image src={'/logos.png'} alt="" fill className="object-contain" />
+      </div>
+      <Button
+        onClick={() => setOpen(!open)}
+        className="flex h-fit w-fit items-center justify-center rounded-full border-none bg-blue-50 p-2"
+      >
+        <HiX className="text-2xl text-primary" />
+      </Button>
+    </div>
+  )
+
   return (
     <Header
       className={`fixed z-50 flex h-fit w-full items-center justify-between bg-white px-6 py-2 sm:px-8 md:px-16 lg:px-24`}
@@ -73,14 +87,35 @@ export const HeaderPage = () => {
         <HiMenuAlt4 className="text-3xl text-primary" />
       </Button>
       <Drawer
-        title="Basic Drawer"
-        closable={{ 'aria-label': 'Close Button' }}
+        title={title}
+        closable={false}
         onClose={() => setOpen(false)}
+        mask={false}
         open={open}
+        width="100%"
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <div className={`flex flex-col items-start gap-8`}>
+          {activeSection.map((val, idx) => (
+            <Button
+              onClick={() => {
+                handleScrollTo(val.id)
+                setOpen(!open)
+              }}
+              key={idx}
+              className={`border-none shadow-none hover:!text-slate-300 ${val.isActive ? 'font-bold text-primary' : 'font-medium text-slate-600'} text-lg hover:text-blue-300`}
+            >
+              {val.name}
+            </Button>
+          ))}
+          <CustomButton
+            onClick={() => {
+              handleScrollTo('contact')
+              setOpen(!open)
+            }}
+            text="Contact me"
+            isPrimary
+          />
+        </div>
       </Drawer>
     </Header>
   )

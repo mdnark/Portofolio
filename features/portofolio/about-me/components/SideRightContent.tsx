@@ -1,5 +1,8 @@
+'use client'
+
 import { CustomButton } from '#/components/ui/CustomButton'
 import { TitleSection } from '#/components/ui/TitleSection'
+import { handleScrollTo } from '#/utils/scroll'
 import React from 'react'
 import { HiDownload } from 'react-icons/hi'
 
@@ -16,7 +19,11 @@ export const SideRightContent = () => {
         </p>
       </div>
       <div className="flex gap-4">
-        <CustomButton text="View Project" isPrimary />
+        <CustomButton
+          text="View Project"
+          isPrimary
+          onClick={() => handleScrollTo('projects')}
+        />
         <a href="/assets/cv.pdf" download={'CV_M_Danar_Kahfi.pdf'}>
           <CustomButton
             text="Download CV"
