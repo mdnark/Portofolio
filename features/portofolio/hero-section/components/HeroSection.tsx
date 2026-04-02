@@ -5,6 +5,7 @@ import Image from 'next/image'
 import React from 'react'
 import { RunningBanner } from './RunningBanner'
 import { contentServices } from '#/constants/services'
+import { currentYear } from '#/utils/currentYear'
 
 export const HeroSection = () => {
   const { isMobile } = useBreakpoint()
@@ -29,6 +30,9 @@ export const HeroSection = () => {
       />
 
       <div className="relative h-[310px] w-[300px] sm:h-[442px] sm:w-[463px] md:h-[502px] md:w-[663px] xl:w-[963px]">
+        <div className="absolute right-28 top-5 flex w-full justify-center text-3xl font-extrabold text-transparent [-webkit-text-stroke:1px_theme(colors.primary)] sm:right-44 sm:top-7 sm:text-6xl md:right-48 md:top-10">
+          {currentYear}
+        </div>
         <div
           className={`relative flex flex-col items-center justify-center ${sizeClass} font-extrabold text-primary sm:mt-0`}
         >

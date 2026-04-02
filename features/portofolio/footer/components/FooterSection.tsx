@@ -8,10 +8,11 @@ import { Button } from 'antd'
 import { handleScrollTo } from '#/utils/scroll'
 import { contentServices } from '#/constants/services'
 import { listContact } from '#/constants/footer'
+import { currentYear } from '#/utils/currentYear'
 
 export const FooterSection = () => {
   return (
-    <div className="flex flex-col gap-12" id='contact'>
+    <div className="flex flex-col gap-12" id="contact">
       <div className="flex flex-col gap-8 px-12">
         <div className="border-b border-slate-200 pb-8">
           <h1 className="mb-0 text-4xl font-semibold text-slate-800">
@@ -92,7 +93,7 @@ export const FooterSection = () => {
       </div>
       <div className="flex h-fit items-center justify-around bg-primary py-4 text-sm font-medium text-white">
         <p className="mb-0">
-          Copyright © 2026 M. Danar Kahfi. All rights reserved.
+          {`Copyright © ${currentYear} M. Danar Kahfi. All rights reserved.`}
         </p>
       </div>
     </div>
