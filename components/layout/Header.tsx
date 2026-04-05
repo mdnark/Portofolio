@@ -43,7 +43,7 @@ export const HeaderPage = () => {
   }, [])
 
   const title = (
-    <div className="flex items-center justify-between border-b border-slate-200 pb-4">
+    <div className="flex items-center justify-between">
       <div className={`relative flex h-16 w-16`}>
         <Image src={'/logos.png'} alt="" fill className="object-contain" />
       </div>

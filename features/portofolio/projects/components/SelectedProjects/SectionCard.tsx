@@ -5,13 +5,14 @@ import { LabelPosition } from '#/components/ui/LabelPosition'
 import Image from 'next/image'
 import React from 'react'
 
-interface Props {
+type Props = {
   src: string
   title: string
   desc: string
   role: string[]
   tools: string[]
   isReverse: boolean
+  onClick: () => void
   slug?: string
 }
 
@@ -21,16 +22,16 @@ export const SectionCard = ({
   src,
   desc,
   title,
-  slug,
+  onClick,
   isReverse,
 }: Props) => {
   return (
     <div
-      className={`flex shadow-[17px_17px_44px_0px_rgba(0,104,255,0.05),_-8px_-8px_44px_0px_rgba(0,104,255,0.05)] ${isReverse ? 'flex-col-reverse xl:flex-row' : 'flex-col-reverse xl:flex-row-reverse'} items-center gap-6 rounded-3xl bg-slate-50`}
+      className={`relative flex w-full shadow-[17px_17px_44px_0px_rgba(0,104,255,0.05),_-8px_-8px_44px_0px_rgba(0,104,255,0.05)] ${isReverse ? 'flex-col-reverse lg:flex-row' : 'flex-col-reverse lg:flex-row-reverse'} items-center gap-6 rounded-3xl bg-slate-50`}
     >
-      <div className="flex flex-col gap-6 px-8 py-5">
+      <div className="flex w-full flex-col gap-6 px-8 py-5 lg:w-1/2">
         <div className="flex flex-col gap-2">
-          <div className="flex flex-col-reverse gap-4 xl:flex-row">
+          <div className="flex flex-col-reverse gap-4 ">
             <h1 className="mb-0 text-3xl font-semibold text-slate-800">
               {title}
             </h1>
@@ -40,28 +41,18 @@ export const SectionCard = ({
               ))}
             </div>
           </div>
-          <div className="mb-0 flex items-center text-base font-medium text-slate-500">
-            <span className="mr-1">Tools :</span>
-            {tools.map((val, idx) => (
-              <div key={idx} className="flex items-center">
-                <span>{val}</span>
-                {idx < tools.length - 1 && <p className="mx-1">&</p>}
-              </div>
-            ))}
+          <div className="mb-0 flex items-center overflow-hidden text-base font-medium text-slate-500">
+            <span className="mr-1 shrink-0">Tools :</span>
+            <p className="mb-0 truncate">{tools.join(' & ')}</p>
           </div>
         </div>
         <p className="mb-0 whitespace-pre-line text-lg font-medium text-slate-700">
           {desc}
         </p>
-        <CustomButton text="See Detail" isPrimary />
+        <CustomButton text="See Detail" isPrimary onClick={onClick} />
       </div>
-      <div className="relative aspect-square w-full shrink-0 lg:aspect-[4/3] xl:h-[443px] xl:w-[490px]">
-        <Image
-          src={src}
-          alt=""
-          fill
-          className="rounded-3xl object-fill lg:object-cover xl:object-contain"
-        />
+      <div className="relative aspect-square w-full shrink-0 lg:aspect-auto lg:w-1/2 lg:self-stretch">
+        <Image src={src} alt="" fill className="rounded-3xl object-cover" />
       </div>
     </div>
   )

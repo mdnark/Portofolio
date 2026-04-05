@@ -13,7 +13,7 @@ const GAP = 32
 
 export const OtherProjectSection = () => {
   const otherProjects = listProjects.filter(
-    (val) => !['aca-insurance', 'mbinet', 'dashboard-afc'].includes(val.slug),
+    (val) => !['aca-insurance', 'mbinet', 'dashboard-afc'].includes(val.project.slug),
   )
 
   const containerRef = useRef<HTMLDivElement | null>(null)
@@ -43,9 +43,9 @@ export const OtherProjectSection = () => {
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
           {/* Horizontal gallery */}
           <motion.div style={{ x }} className="flex gap-8 px-6 sm:px-24 md:px-16 lg:px-24">
-            {otherProjects.map((project, idx) => (
+            {otherProjects.map((val, idx) => (
               <div key={idx} className="w-[470px] flex-shrink-0">
-                <SectionCard {...project} />
+                <SectionCard src={val.project.src} />
               </div>
             ))}
           </motion.div>
