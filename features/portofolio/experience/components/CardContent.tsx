@@ -21,7 +21,7 @@ export const CardContent = ({
         <p className="mb-0">{major}</p>
         <div>
           <p className="mb-0">Responsibility :</p>
-          <ul className="list-disc">
+          <ul className="list-outside list-disc">
             {responsibility.map((val, idx) => (
               <li key={idx}>{val}</li>
             ))}
