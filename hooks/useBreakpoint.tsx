@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const useBreakpoint = () => {
   const [width, setWidth] = useState(0)
@@ -10,6 +10,6 @@ export const useBreakpoint = () => {
     return () => window.removeEventListener('resize', check)
   }, [])
   return {
-    isMobile: width < 446,
+    isMobile: width > 0 && width < 446,
   }
 }
