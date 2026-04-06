@@ -16,7 +16,7 @@ export const FooterSection = () => {
       <div className="flex flex-col gap-8 px-12">
         <div className="border-b border-slate-200 pb-8">
           <h1 className="mb-0 text-4xl font-semibold text-slate-800">
-            Let’s <span className="text-primary">Connect</span> there
+            Let’s <span className="text-primary">Work</span> Together
           </h1>
         </div>
         <div className="flex flex-col gap-11 md:flex-row">

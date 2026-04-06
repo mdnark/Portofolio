@@ -46,22 +46,26 @@ export const DetailDrawer = ({ open, setOpen, datas }: Props) => {
             <h1 className="mb-0 text-3xl font-semibold text-slate-800">
               {datas?.project.name}
             </h1>
-            <p className="mb-0">
-              <span className={isMobile ? 'hidden' : 'flex'}>Role :</span> {datas?.project.role.join(' & ')}
+            <p className="mb-0 flex items-center">
+              <span className={isMobile ? 'hidden' : 'mr-1 flex'}>Role :</span>{' '}
+              {datas?.project.role.join(' & ')}
             </p>
-
-            <Link
-              href={datas?.project.repository ?? ''}
-              className="flex items-center gap-2 text-slate-500"
-            >
-              <HiLink /> <span>View Source Code</span>
-            </Link>
+            {datas?.project.repository && (
+              <Link
+                href={datas?.project.repository ?? ''}
+                className="flex items-center gap-2 text-slate-500"
+              >
+                <HiLink /> <span>View Source Code</span>
+              </Link>
+            )}
           </div>
+
           <DetailColumnDrawer title="Project Overview">
             <p className="mb-0 whitespace-pre-line">
               {datas?.overview.description}
             </p>
           </DetailColumnDrawer>
+
           <DetailColumnDrawer title="Problem Statement">
             <ul className="list-outside list-disc">
               {datas?.problemStatement.map((val, idx) => (
@@ -69,6 +73,7 @@ export const DetailDrawer = ({ open, setOpen, datas }: Props) => {
               ))}
             </ul>
           </DetailColumnDrawer>
+
           <DetailColumnDrawer title="Solution">
             <ul className="list-outside list-disc">
               {datas?.solution.map((val, idx) => (
@@ -76,19 +81,21 @@ export const DetailDrawer = ({ open, setOpen, datas }: Props) => {
               ))}
             </ul>
           </DetailColumnDrawer>
+
           <DetailColumnDrawer title="UI Design">
             <div className="flex flex-col gap-1">
               <h2 className="mb-0 font-semibold">Design System:</h2>
               <ul className="list-outside list-disc">
                 {Object.entries(datas?.uiDesign.designSystem ?? {}).map(
-                  ([key, val], idx) => (
-                    <li key={idx}>
-                      <span className="capitalize">
-                        {key.replace(/([A-Z])/g, ' $1')}:{' '}
-                      </span>
-                      {val}
-                    </li>
-                  ),
+                  ([key, val], idx) =>
+                    val ? (
+                      <li key={idx}>
+                        <span className="capitalize">
+                          {key.replace(/([A-Z])/g, ' $1')}:{' '}
+                        </span>
+                        {val}
+                      </li>
+                    ) : null,
                 )}
               </ul>
             </div>
@@ -101,35 +108,41 @@ export const DetailDrawer = ({ open, setOpen, datas }: Props) => {
               </ul>
             </div>
           </DetailColumnDrawer>
-          <DetailColumnDrawer title="Front-End Implementation">
-            <div className="flex flex-col gap-1">
-              <h2 className="mb-0 font-semibold">Tech Stack:</h2>
-              <ul className="list-outside list-disc">
-                {datas?.project.techStack.map((val, idx) => (
-                  <li key={idx}>{val}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex flex-col gap-1">
-              <h2 className="mb-0 font-semibold">Key Features:</h2>
-              <ul className="list-outside list-disc">
-                {Object.entries(
-                  datas?.frontEndImplementation.keyFeatures ?? {},
-                ).map(([key, val], idx) => (
-                  <li key={idx}>
-                    <span className="capitalize">
-                      {key.replace(/([A-Z])/g, ' $1')}:
-                    </span>
-                    <ul className="list-disc pl-4">
-                      {val.map((val: string, i: string) => (
-                        <li key={i}>{val}</li>
-                      ))}
-                    </ul>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </DetailColumnDrawer>
+
+          {datas?.frontEndImplementation && (
+            <DetailColumnDrawer title="Front-End Implementation">
+              <div className="flex flex-col gap-1">
+                <h2 className="mb-0 font-semibold">Tech Stack:</h2>
+                <ul className="list-outside list-disc">
+                  {datas?.project.techStack.map((val, idx) => (
+                    <li key={idx}>{val}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex flex-col gap-1">
+                <h2 className="mb-0 font-semibold">Key Features:</h2>
+                <ul className="list-outside list-disc">
+                  {Object.entries(
+                    datas?.frontEndImplementation?.keyFeatures ?? {},
+                  ).map(([key, val], idx) =>
+                    val ? (
+                      <li key={idx}>
+                        <span className="capitalize">
+                          {key.replace(/([A-Z])/g, ' $1')}:
+                        </span>
+                        <ul className={'list-disc pl-4'}>
+                          {val.map((val: string, i: number) => (
+                            <li key={i}>{val}</li>
+                          ))}
+                        </ul>
+                      </li>
+                    ) : null,
+                  )}
+                </ul>
+              </div>
+            </DetailColumnDrawer>
+          )}
+
           <DetailColumnDrawer title="Challenges & Solutions">
             <div className="flex flex-col gap-1">
               <h2 className="mb-0 font-semibold">Challenges:</h2>
@@ -148,6 +161,7 @@ export const DetailDrawer = ({ open, setOpen, datas }: Props) => {
               </ul>
             </div>
           </DetailColumnDrawer>
+
           <DetailColumnDrawer title="Learnings">
             <ul className="list-outside list-disc">
               {datas?.learnings.map((val, idx) => (
@@ -155,6 +169,7 @@ export const DetailDrawer = ({ open, setOpen, datas }: Props) => {
               ))}
             </ul>
           </DetailColumnDrawer>
+
           <DetailColumnDrawer title=" Result / Impact">
             <ul className="list-outside list-disc">
               {datas?.resultImpact.map((val, idx) => (

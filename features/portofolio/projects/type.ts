@@ -1,6 +1,6 @@
 export interface DesignSystem {
   primaryColor: string
-  secondaryColor: string
+  secondaryColor: string | null
   neutralColor: string
   typography: string
   gridSystem: string
@@ -12,11 +12,7 @@ export interface UIDesign {
 }
 
 export interface KeyFeatures {
-  authentication: string[]
-  servicesAndPackages: string[]
-  transactions: string[]
-  adminDashboard: string[]
-  dataManagement: string[]
+  [key: string]: string[] | undefined
 }
 
 export interface FrontEndImplementation {
@@ -34,7 +30,7 @@ export interface ProjectDetail {
     role: string[]
     period: string
     src: string
-    repository: string
+    repository: string | null
     techStack: string[]
     slug: string
   }
@@ -44,7 +40,7 @@ export interface ProjectDetail {
   problemStatement: string[]
   solution: string[]
   uiDesign: UIDesign
-  frontEndImplementation: FrontEndImplementation
+  frontEndImplementation: FrontEndImplementation | null
   challengesAndSolutions: ChallengesAndSolutions
   learnings: string[]
   resultImpact: string[]
