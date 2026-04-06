@@ -124,18 +124,20 @@ export const DetailDrawer = ({ open, setOpen, datas }: Props) => {
                 <ul className="list-outside list-disc">
                   {Object.entries(
                     datas?.frontEndImplementation?.keyFeatures ?? {},
-                  ).map(([key, val], idx) => (
-                    <li key={idx}>
-                      <span className="capitalize">
-                        {key.replace(/([A-Z])/g, ' $1')}:
-                      </span>
-                      <ul className="list-disc pl-4">
-                        {val.map((val: string, i: string) => (
-                          <li key={i}>{val}</li>
-                        ))}
-                      </ul>
-                    </li>
-                  ))}
+                  ).map(([key, val], idx) =>
+                    val ? (
+                      <li key={idx}>
+                        <span className="capitalize">
+                          {key.replace(/([A-Z])/g, ' $1')}:
+                        </span>
+                        <ul className={'list-disc pl-4'}>
+                          {val.map((val: string, i: number) => (
+                            <li key={i}>{val}</li>
+                          ))}
+                        </ul>
+                      </li>
+                    ) : null,
+                  )}
                 </ul>
               </div>
             </DetailColumnDrawer>

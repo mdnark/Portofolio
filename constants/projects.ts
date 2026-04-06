@@ -55,35 +55,7 @@ export const listProjects = [
         'Role-based UI for admin and sales',
       ],
     },
-    frontEndImplementation: {
-      keyFeatures: {
-        authentication: [
-          'User login & registration',
-          'Form validation and error handling',
-          'User session management',
-        ],
-        leadOrTicketManagement: [
-          'Create and manage customer tickets',
-          'Assign tickets to sales automatically or manually',
-          'Track ticket status across the sales pipeline',
-        ],
-        salesWorkflowManagement: [
-          'Structured flow from initial contact to final transaction',
-          'Clear task responsibilities for each role',
-          'Improved follow-up tracking for sales',
-        ],
-        pipelineTracking: [
-          'Visual tracking of customer journey stages',
-          'Easy monitoring of sales progress',
-          'Organized data for better decision-making',
-        ],
-        dataManagement: [
-          'Customer data management',
-          'Filtering and searching leads',
-          'Efficient handling of large datasets',
-        ],
-      },
-    },
+    frontEndImplementation: null,
     challengesAndSolutions: {
       challenges: [
         'Designing a system that supports multiple roles (admin, sales manager, sales)',
@@ -235,14 +207,6 @@ export const listProjects = [
       'Provided a scalable foundation for future system development and customization',
     ],
   },
-  // {
-  //   src: '/assets/project/motionbank.png',
-  //   title: 'MotionBank',
-  //   desc: 'Reward points redemption mobile app.',
-  //   role: ['UI/UX Design'],
-  //   tools: ['Figma'],
-  //   slug: 'motionbank',
-  // },
   // GNA Cluster
   {
     project: {
@@ -357,6 +321,14 @@ export const listProjects = [
       'Delivered a scalable system to support ongoing business growth',
     ],
   },
+  // {
+  //   src: '/assets/project/motionbank.png',
+  //   title: 'MotionBank',
+  //   desc: 'Reward points redemption mobile app.',
+  //   role: ['UI/UX Design'],
+  //   tools: ['Figma'],
+  //   slug: 'motionbank',
+  // },
   // MotionBank
   {
     project: {
@@ -405,35 +377,7 @@ export const listProjects = [
         'Role-based UI for admin and sales',
       ],
     },
-    frontEndImplementation: {
-      keyFeatures: {
-        authentication: [
-          'User login & registration',
-          'Form validation and error handling',
-          'User session management',
-        ],
-        leadOrTicketManagement: [
-          'Create and manage customer tickets',
-          'Assign tickets to sales automatically or manually',
-          'Track ticket status across the sales pipeline',
-        ],
-        salesWorkflowManagement: [
-          'Structured flow from initial contact to final transaction',
-          'Clear task responsibilities for each role',
-          'Improved follow-up tracking for sales',
-        ],
-        pipelineTracking: [
-          'Visual tracking of customer journey stages',
-          'Easy monitoring of sales progress',
-          'Organized data for better decision-making',
-        ],
-        dataManagement: [
-          'Customer data management',
-          'Filtering and searching leads',
-          'Efficient handling of large datasets',
-        ],
-      },
-    },
+    frontEndImplementation: null,
     challengesAndSolutions: {
       challenges: [
         'Designing a system that supports multiple roles (admin, sales manager, sales)',
