@@ -34,24 +34,24 @@ export const HeroSection = () => {
           {currentYear}
         </div>
         <div
-          className={`relative flex flex-col items-center justify-center ${sizeClass} font-extrabold text-primary sm:mt-0`}
+          className={`relative flex flex-col items-center justify-center ${sizeClass} text-primary sm:mt-0`}
         >
           {words.map((word, i) => (
             <h1
               key={word}
-              className={`${i === 0 ? textClass : negMarginClass} mb-0 ${textShadow}`}
+              className={`${i === 0 ? textClass : negMarginClass} mb-0 font-extrabold ${textShadow}`}
             >
               {word}
             </h1>
           ))}
 
           <div
-            className={`absolute z-40 flex flex-col items-center justify-center ${sizeClass} font-extrabold text-transparent [-webkit-text-stroke:1px_theme(colors.primary)]`}
+            className={`absolute z-40 flex flex-col items-center justify-center ${sizeClass} text-transparent [-webkit-text-stroke:1px_theme(colors.primary)]`}
           >
             {words.map((word, i) => (
               <h1
                 key={word}
-                className={`${i === 0 ? textClass : negMarginClass} mb-0 ${textShadow}`}
+                className={`${i === 0 ? textClass : negMarginClass} font-extrabold mb-0 ${textShadow}`}
               >
                 {word}
               </h1>
