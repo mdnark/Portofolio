@@ -4,9 +4,9 @@ import { OtherProjectSection } from './OtherProjects/OtherProjectsSection'
 
 export const ProjectsSection = () => {
   return (
-    <div className="flex scroll-mt-24 flex-col gap-16" id="projects">
+    <section className="flex scroll-mt-24 flex-col gap-16" id="projects">
       <SelectedProjectsSection />
       <OtherProjectSection />
-    </div>
+    </section>
   )
 }

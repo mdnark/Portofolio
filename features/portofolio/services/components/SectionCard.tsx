@@ -12,10 +12,10 @@ interface Props {
 
 export const SectionCard = ({ height, src, width, subtitle, title }: Props) => {
   return (
-    <div className="w-full flex flex-col gap-5 px-6 xl:px-12 py-6 xl:py-8 items-start bg-slate-50 rounded-2xl">
+    <article className="w-full flex flex-col gap-5 px-6 xl:px-12 py-6 xl:py-8 items-start bg-slate-50 rounded-2xl">
       <Image src={src} alt="" width={width} height={height} />
-      <h1 className="font-semibold text-xl text-slate-700 mb-0">{title}</h1>
+      <h3 className="font-semibold text-xl text-slate-700 mb-0">{title}</h3>
       <SubTitleSection text={subtitle} className="!text-start w-52" />
-    </div>
+    </article>
   )
 }

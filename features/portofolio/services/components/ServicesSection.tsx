@@ -6,7 +6,7 @@ import { SectionCard } from './SectionCard'
 
 export const ServicesSection = () => {
   return (
-    <div
+    <section
       className="scroll-mt-24 flex flex-col gap-6 px-6 sm:px-24 md:px-16 lg:px-24 justify-center items-center pt-6"
       id="services"
     >
@@ -26,6 +26,6 @@ export const ServicesSection = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   )
 }

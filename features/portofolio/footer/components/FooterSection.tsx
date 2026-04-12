@@ -12,16 +12,16 @@ import { currentYear } from '#/utils/currentYear'
 
 export const FooterSection = () => {
   return (
-    <div className="flex flex-col gap-12" id="contact">
+    <footer className="flex flex-col gap-12" id="contact">
       <div className="flex flex-col gap-8 px-12">
         <div className="border-b border-slate-200 pb-8">
-          <h1 className="mb-0 text-4xl font-semibold text-slate-800">
-            Let’s <span className="text-primary">Work</span> Together
-          </h1>
+          <h2 className="mb-0 text-4xl font-semibold text-slate-800">
+            Let&apos;s <span className="text-primary">Work</span> Together
+          </h2>
         </div>
         <div className="flex flex-col gap-11 md:flex-row">
-          <div className="flex w-full flex-col gap-6 lg:w-[700px]">
-            <div className="flex items-center gap-2">
+          <div className="flex w-full flex-col lg:w-[700px]">
+            <address className="flex items-center gap-2 not-italic">
               <div
                 className={`relative flex h-12 w-12 items-center gap-3 text-base font-semibold`}
               >
@@ -35,7 +35,7 @@ export const FooterSection = () => {
               <p className="mb-0 text-xl font-semibold text-slate-800">
                 M Danar Kahfi
               </p>
-            </div>
+            </address>
             <p className="mb-0 whitespace-pre-line text-xs font-medium text-slate-500">
               {`I believe great digital products are born from great collaboration. If you're looking for someone who can bridge the gap between design and development, I'd love to hear from you.\n\nThank you for viewing my portfolio.`}
             </p>
@@ -96,6 +96,6 @@ export const FooterSection = () => {
           {`Copyright © ${currentYear} M. Danar Kahfi. All rights reserved.`}
         </p>
       </div>
-    </div>
+    </footer>
   )
 }

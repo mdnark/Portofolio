@@ -9,7 +9,7 @@ import { FooterSection } from './footer/components/FooterSection'
 
 export const PortofolioPage = () => {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col gap-16">
+    <main className="mx-auto flex max-w-7xl flex-col gap-16">
       <HeroSection />
       <AboutSection />
       <ServicesSection />
@@ -17,6 +17,6 @@ export const PortofolioPage = () => {
       <ProjectsSection />
       <ExperienceSection />
       <FooterSection/>
-    </div>
+    </main>
   )
 }

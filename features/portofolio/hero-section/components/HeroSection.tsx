@@ -20,7 +20,7 @@ export const HeroSection = () => {
   const words = ['PORTO', 'FOLIO']
 
   return (
-    <div className="relative flex h-fit w-full justify-center" id="home">
+    <section className="relative flex h-fit w-full justify-center" id="home">
       <Image
         src={'/assets/abstrac-line.svg'}
         alt=""
@@ -73,6 +73,6 @@ export const HeroSection = () => {
         />
       </div>
       <RunningBanner data={contentServices} />
-    </div>
+    </section>
   )
 }

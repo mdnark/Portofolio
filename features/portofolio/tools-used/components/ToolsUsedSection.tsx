@@ -8,12 +8,11 @@ export const ToolsUsedSection = () => {
   const banner1 = listTools.slice(0, half)
   const banner2 = listTools.slice(half)
 
-  console.log(banner1)
   return (
-    <div className="flex flex-col gap-9 items-center">
+    <section className="flex flex-col gap-9 items-center">
       <TitleSection text="Tools Used" />
       <RunningBanner data={banner1} onRight />
       <RunningBanner data={banner2} />
-    </div>
+    </section>
   )
 }
