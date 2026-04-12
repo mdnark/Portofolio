@@ -11,16 +11,9 @@ import { ProjectDetail } from '../../type'
 export const SelectedProjectsSection = () => {
   const [open, setOpen] = useState<boolean>(false)
   const [data, setData] = useState<ProjectDetail | null>(null)
-
-  console.log(data);
   
-
   const selectedProjects = listProjects.filter((val) =>
     ['aca-insurance', 'mbinet', 'dashboard-afc'].includes(val.project?.slug),
-  )
-
-  const dataProject = listProjects.filter(
-    (val) => val.project.slug === data?.project.slug,
   )
 
   return (

@@ -30,7 +30,6 @@ export interface ProjectDetail {
     role: string[]
     period: string
     src: string
-    repository: string | null
     techStack: string[]
     slug: string
   }

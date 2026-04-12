@@ -50,14 +50,6 @@ export const DetailDrawer = ({ open, setOpen, datas }: Props) => {
               <span className={isMobile ? 'hidden' : 'mr-1 flex'}>Role :</span>{' '}
               {datas?.project.role.join(' & ')}
             </p>
-            {datas?.project.repository && (
-              <Link
-                href={datas?.project.repository ?? ''}
-                className="flex items-center gap-2 text-slate-500"
-              >
-                <HiLink /> <span>View Source Code</span>
-              </Link>
-            )}
           </div>
 
           <DetailColumnDrawer title="Project Overview">

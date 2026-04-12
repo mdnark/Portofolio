@@ -1,17 +1,22 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'motion/react'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 import { SubTitleSection } from '#/components/ui/SubTitleSection'
 import { TitleSection } from '#/components/ui/TitleSection'
 import { SectionCard } from './SectionCard'
 import { listProjects } from '#/constants/projects'
+import { ProjectDetail } from '../../type'
+import { DetailDrawer } from '../DetailDrawer'
 
 const CARD_WIDTH = 420
 const GAP = 32
 
 export const OtherProjectSection = () => {
+  const [open, setOpen] = useState<boolean>(false)
+  const [data, setData] = useState<ProjectDetail | null>(null)
+
   const otherProjects = listProjects.filter(
     (val) =>
       !['aca-insurance', 'mbinet', 'dashboard-afc'].includes(val.project.slug),
@@ -49,12 +54,19 @@ export const OtherProjectSection = () => {
           >
             {otherProjects.map((val, idx) => (
               <div key={idx} className="flex w-[470px] shrink-0">
-                <SectionCard src={val.project.src} />
+                <SectionCard
+                  src={val.project.src}
+                  onClick={() => {
+                    setData(val)
+                    setOpen(!open)
+                  }}
+                />
               </div>
             ))}
           </motion.div>
         </div>
       </div>
+      <DetailDrawer open={open} setOpen={setOpen} datas={data} />
     </section>
   )
 }
