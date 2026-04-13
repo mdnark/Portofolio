@@ -1,6 +1,6 @@
 export const workExperienceList = [
   {
-    period: 'Jun 2020 - May 2023',
+    period: 'Oct 2023 - Mar 2026',
     lembaga: 'PT Adyatma Cendekia Sinergi Abadi (ACSA)',
     major: 'Frontend Developer & UI/UX Design',
     responsibility: [
