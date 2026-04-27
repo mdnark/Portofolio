@@ -24,7 +24,7 @@ export const SideRightContent = () => {
           isPrimary
           onClick={() => handleScrollTo('projects')}
         />
-        <a href="/assets/cv.pdf" download={'CV_M_Danar_Kahfi.pdf'}>
+        <a href="/assets/CV_M_Danar_Kahfi.pdf" download>
           <CustomButton
             text="Download CV"
             icon={<HiDownload className="text-base" />}
