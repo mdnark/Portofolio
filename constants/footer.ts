@@ -5,7 +5,7 @@ export const listContact = {
   },
   socials: [
     { src: '/assets/icon/whatsapp.svg', href: 'https://wa.me/6285156310805' },
-    { src: '/assets/icon/github.svg', href: 'https://github.com/username' },
+    { src: '/assets/icon/github.svg', href: 'https://github.com/mdnark' },
     {
       src: '/assets/icon/linkedin.svg',
       href: 'https://linkedin.com/in/m-danar-kahfi',
